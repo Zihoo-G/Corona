@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全国疫情可视化大屏</title>
+    <link rel="stylesheet" href="css/index.css"></style>
+    <script src="js/echarts.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js"></script>
+    <script src="js/init.js"></script>
+</head>
+<body>
+    <script src="js/flexible.js"></script>
+
+    <!-- 头部的盒子 -->
+    <header>
+        <h1>全国疫情可视化大屏</h1>
+        <div class="showTime">2021-03-21 16:30</div>
+        <!-- 获取当前时间 -->
+        <script>
+            var t = null;
+            t = setTimeout(time, 100);
+            function time() {
+                //清楚定时器
+                clearTimeout(t);
+                dt = new Date();
+                var year = dt.getFullYear();
+                var month = dt.getMonth() + 1;
+                if (month < 10) {
+                    month = '0' + month
+                }
+                var day = dt.getDate();
+                if (day < 10) {
+                    day = '0' + day
+                }
+                var hour = dt.getHours();
+                if (hour < 10) {
+                    hour = '0' + hour
+                }
+                var minute = dt.getMinutes();
+                if (minute < 10) {
+                    minute = '0' + minute
+                }
+                var second = dt.getSeconds();
+                if (second < 10) {
+                    second = '0' + second
+                }
+                var timeStr = year+'年'+month+'月'+day+'日 '+hour+':'+minute+':'+second 
+                $('.showTime').html(timeStr)
+
+                t = setTimeout(time, 1000)
+
+            }
+        </script>
+    </header>
+
+    <!-- 页面主体部分 -->
+    <section class="mainbox">
+        <div id="column1">
+            <div class="panel_bar">
+                <h3>▍各省累计病例</h3>
+                <div id="bar"></div>
+            </div>
+        </div>
+        <div id="column2">
+            <div class="panel_info">
+                <ul>
+                </ul>
+            </div>
+            <div class="panel_map">
+                <h3>▍地图</h3>
+                <div id="map"></div>
+            </div>
+        </div>
+        <div id="column3">
+            <div class="panel_line">
+                <h3>▍全国新增确诊</h3>
+                <div id="line"></div>
+            </div>
+            <div class="panel_pie">
+                <h3>▍中国力量-各省治愈人数</h3>
+                <div id="pie"></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

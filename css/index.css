@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #181625;
+    background-size: 100% auto;
+}
+
+header {
+    position: relative;
+    height: 1.25rem;
+    background: url('../image/head_bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+h1 {
+    font-size: 0.475rem;
+    color: white;
+    text-align: center;
+    line-height: 1rem;
+}
+
+.showTime {
+    top: 0;
+    position: absolute;
+    right: .375rem;
+    line-height: .9375rem;
+    font-size: .25rem;
+    color: rgba(255 , 255, 255, 0.7);
+}
+
+.mainbox {
+    display: flex;
+    min-width: 1024px;
+    margin: 0 auto;
+    padding: .125rem .125rem 0;
+}
+
+#column1 {
+    flex: 3;
+}
+
+#column2 {
+    flex: 5;
+}
+
+#column3 {
+    flex: 3;
+}
+
+.panel_bar {
+    height: 10rem;
+    padding: .125rem .1875rem .5rem;
+    margin-bottom: .1875rem;
+    border: solid 2px rgba(25,186,139,0.17);
+    background-color: #222634;
+    border-radius: .25rem;
+}
+
+h3 {
+    font-size: .25rem;
+    color: white;
+}
+
+.panel_info {
+    margin-left: .25rem;
+    height: 3.375rem;
+    padding: .125rem .1875rem .5rem;
+    border: solid 2px rgba(25,186,139,0.17);
+    background-color: #222634;
+    border-radius: .25rem;
+}
+
+.panel_map {
+    margin-top: .125rem;
+    margin-left: .25rem;
+    height: 6.5rem;
+    padding: .125rem .1875rem .5rem;
+    border: solid 2px rgba(25,186,139,0.17);
+    background-color: #222634;
+    border-radius: .25rem;
+}
+
+.panel_line {
+    margin-left: .25rem;
+    height: 4.9375rem;
+    padding: .125rem .1875rem .5rem;
+    border: solid 2px rgba(25,186,139,0.17);
+    background-color: #222634;
+    border-radius: .25rem;
+}
+.panel_pie {
+    margin-top: .125rem;
+    margin-left: .25rem;
+    height: 4.9375rem;
+    padding: .125rem .1875rem .5rem;
+    border: solid 2px rgba(25,186,139,0.17);
+    background-color: #222634;
+    border-radius: .25rem;
+}
+
+li {
+    margin-top: .325rem;
+    color: white;
+    list-style-type: none;
+    float: left;
+    margin-left: .55rem;
+}
+span {
+    text-align: center;
+    font-size: .425rem;
+}
+ul li div h3 {
+    text-align: center;
+}
+
+.panel_info ul li div {
+    width: 1.25rem;
+    text-align: center;
+
+}
+
+#map {
+
+    height: 5.575rem;
+    width: 8.925rem;
+    margin: .125rem auto;
+}
+
+#line {
+    height: 260px;
+    width: 420px;
+    margin: .125rem auto;
+}
+
+#bar {
+    width: 6.3rem;
+    height: 9.2rem;
+    margin: .125rem auto;
+}
+
+#pie {
+    width: 420px;
+    height: 260px;
+    margin: .125rem auto;
+}
